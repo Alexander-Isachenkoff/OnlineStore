@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="600.0" prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainFormController">
+    <children>
+        <VBox id="menu-bar" minWidth="-Infinity">
+            <children>
+                <ToggleButton fx:id="productsButton" mnemonicParsing="false" styleClass="nav-button" text="Товары" />
+                <ToggleButton fx:id="storageButton" disable="true" mnemonicParsing="false" styleClass="nav-button" text="Склад" />
+                <ToggleButton fx:id="categoriesButton" mnemonicParsing="false" styleClass="nav-button" text="Категории" />
+                <ToggleButton fx:id="manufacturersButton" mnemonicParsing="false" styleClass="nav-button" text="Производители" />
+                <ToggleButton fx:id="suppliesButton" disable="true" mnemonicParsing="false" styleClass="nav-button" text="Поставки" />
+                <ToggleButton fx:id="providersButton" disable="true" mnemonicParsing="false" styleClass="nav-button" text="Поставщики" />
+            </children>
+        </VBox>
+        <VBox fx:id="tableBox" HBox.hgrow="ALWAYS">
+            <fx:include fx:id="productsScene" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="products_scene.fxml" VBox.vgrow="ALWAYS" />
+            <fx:include fx:id="categoriesScene" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="categories_scene.fxml" VBox.vgrow="ALWAYS" />
+            <fx:include fx:id="manufacturersScene" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="manufacturers_scene.fxml" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </children>
+</HBox>
